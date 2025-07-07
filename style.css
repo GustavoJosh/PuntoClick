@@ -1,0 +1,408 @@
+/* ================================== */
+/* ==   VARIABLES Y ESTILOS BASE   == */
+/* ================================== */
+:root {
+    --primary-color: #FF7A00;
+    --secondary-color: #333333;
+    --background-color: #f9f9f9;
+    --text-color: #444444;
+    --white: #fff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; text-align: center; }
+h3 { font-size: 1.5rem; }
+
+section {
+    padding: 80px 20px;
+}
+
+/* ================================== */
+/* ==      HERO Y NAVBAR           == */
+/* ================================== */
+.hero {
+    background: linear-gradient(rgba(45, 45, 45, 0.7), rgba(45, 45, 45, 0.7)), url('assets/hero.jpg') no-repeat center center/cover;
+    color: var(--white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    z-index: 1001;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* ---- Botones ---- */
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #e66a00;
+    transform: translateY(-2px);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* ================================== */
+/* ==      OTRAS SECCIONES         == */
+/* ================================== */
+
+/* ---- Cómo Funciona ---- */
+.how-it-works {
+    background-color: var(--background-color);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+}
+
+.step-icon {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 20px auto;
+}
+
+/* ---- Ventajas ---- */
+.advantages {
+    background-color: var(--white);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.advantage-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.advantage-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ---- Qué Ofrecemos (Features) ---- */
+.features {
+    background-color: var(--background-color);
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feature-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.feature-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ---- Paquetes ---- */
+.packages {
+     background-color: var(--white);
+}
+.packages-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.package-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+.package-card ul li {
+    margin-bottom: 10px;
+}
+
+.package-card.popular {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.package-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.package-card .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* ---- Footer ---- */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px 30px 20px;
+}
+.footer h2 {
+    color: var(--white);
+}
+.footer p {
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social-links {
+    margin: 40px 0;
+}
+.social-links a {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+
+/* ================================== */
+/* ==   MENÚ HAMBURGUESA Y MÓVIL   == */
+/* ================================== */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--white);
+    z-index: 1001;
+}
+
+@media(max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    
+    .hero {
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(45, 45, 45, 0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 25px 0;
+        margin-left: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .steps-container, .packages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step, .package-card {
+        margin-bottom: 30px;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .package-card.popular {
+        transform: scale(1);
+    }
+}
